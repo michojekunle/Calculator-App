@@ -14,14 +14,30 @@ html {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate();
+    transform: translate(-50%, -50%);
+    background:none;
+    width: 400px;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.
 
 
 .attribution { 
     font-size: 11px;
+    position: absolute;
+    bottom: 20px;
     text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
  }
 .attribution a {
     color: hsl(228, 45%, 44%);
+
 }
