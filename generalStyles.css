@@ -41,6 +41,22 @@ html {
     justify-content: center;
 }
 
+.themeSwitcher span {
+    font-size: .3rem;
+}
+
+.themeSwitcher .theme-switcher-buttons {
+    width: 24px;
+    padding: 4px;
+    height: 8px;
+}
+
+.themeSwitcher .theme-switcher-buttons button {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+}
+
 
 .attribution { 
     font-size: 11px;
