@@ -3,24 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="generalStyles.css">
+  <link id="themes" rel="stylesheet" href="themeOneStyle.css">
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-
+  <div class="container">
+    <div class="header">
+      <p>calc</p>
+      <div>
+        <span>THEME</span>
+        <div class="themeSwitcher">
+          <div class="topNumbers">
+            <span class="">1</span>
+            <span class="">2</span>
+            <span class="">3</span>
+          </div>
+          <div class="theme-switcher-buttons">
+            <button id="btn1"></button>
+            <button id="btn2"></button>
+            <button id="btn3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result-board">
+        <h1>399,981</h1>
+    </div>
+    <div class="calculation-input-keys">
+       <div class="calculationButtons">
+        <button class="nuumbers seven">7</button>
+        <button class="nuumbers eight">8</button>
+        <button class="nuumbers nine">9</button>
+        <button class="functions del">DEL</button>
+        <button class="nuumbers four">4</button>
+        <button class="nuumbers five">5</button>
+        <button class="nuumbers six">6</button>
+        <button class="operators plus">+</button>
+        <button class="nuumbers one">1</button>
+        <button class="nuumbers two">2</button>
+        <button class="nuumbers three">3</button>
+        <button class="operators minus">-</button>
+        <button class="decimal-point">.</button>
+        <button class="nuumbers zero">0</button>
+        <button class="operators divide">/</button>
+        <button class="nuumbers times">&times;</button>
+        <button class="reset" type="reset">RESET</button>
+        <button class="submit" type="submit">=</button>
+       </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="">Ayo_Mich</a>.
   </div>
 </body>
 </html>
