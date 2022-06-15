@@ -25,7 +25,21 @@ html {
     align-items: center;
 }
 
-.
+.theme {
+    display: flex;
+    align-items: center;
+}
+
+.theme>span {
+    margin-top: 16px;
+    margin-right: 20px;
+    font-size: .4rem;
+}
+
+.themeSwitcher {
+    display: block;
+    justify-content: center;
+}
 
 
 .attribution { 
