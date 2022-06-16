@@ -1,13 +1,13 @@
 body{
-    background:  hsl(0, 0%, 90%);
+    background:   hsl(268, 75%, 9%);
 }
 
 .header p, .themeSwitcher span, .theme>span {
-    color: hsl(60, 10%, 19%);
+    color:hsl(52, 100%, 62%);
 }
 
 .themeSwitcher .theme-switcher-buttons {
-    background:hsl(0, 5%, 81%);
+    background:hsl(268, 71%, 12%);
 }
 
 .theme-switcher-buttons div.btn2{
@@ -18,22 +18,18 @@ body{
     background: none;
 }
 
-.result-board {
-    background: hsl(0, 0%, 93%);
-}
-
-.calculation-input-keys .calculationButtons {
-    background:hsl(0, 5%, 81%);
+.result-board .calculation-input-keys .calculationButtons {
+    background: hsl(268, 71%, 12%);
 }
 
 .result-board h1 {
-    color: hsl(60, 10%, 19%);
+    color: hsl(52, 100%, 62%);
 }
 
 .numbers, .operators, .decimal-point { 
     background: hsl(45, 7%, 89%);
     border-color:hsl(35, 11%, 61%) ;
-    color: hsl(60, 10%, 19%);
+    color: hsl(52, 100%, 62%);
 }
 
 .numbers:hover, .operators:hover, .decimal-point:hover {
@@ -43,7 +39,7 @@ body{
 .functions {
     background: hsl(185, 42%, 37%);
     border-color: hsl(185, 58%, 25%);
-    color: #fff;
+    color: hsl(52, 100%, 62%);
     transition: .4s;
 }
 
