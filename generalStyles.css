@@ -191,4 +191,8 @@ body {
         height: 100vw;
         background: none;
     }
+
+    .container {
+         margin-top: 80px;
+    }
 }
