@@ -56,3 +56,7 @@ body{
 .submit:hover {
     background:  hsl(176, 100%, 78%);
 }
+
+.attribution {
+    color: hsl(52, 100%, 62%);
+}
