@@ -10,15 +10,15 @@ body{
     background:hsl(268, 71%, 12%);
 }
 
-.theme-switcher-buttons div.btn2{
-    background:  hsl(25, 98%, 40%);
+.theme-switcher-buttons div.btn3{
+    background:  hsl(176, 100%, 44%);
 }
 
-.theme-switcher-buttons div.btn1, .theme-switcher-buttons div.btn3 {
+.theme-switcher-buttons div.btn1, .theme-switcher-buttons div.btn2 {
     background: none;
 }
 
-.result-board .calculation-input-keys .calculationButtons {
+.result-board, .calculation-input-keys .calculationButtons {
     background: hsl(268, 71%, 12%);
 }
 
@@ -27,31 +27,32 @@ body{
 }
 
 .numbers, .operators, .decimal-point { 
-    background: hsl(45, 7%, 89%);
-    border-color:hsl(35, 11%, 61%) ;
+    background:  hsl(268, 47%, 21%);
+    border-color: hsl(290, 70%, 36%);
     color: hsl(52, 100%, 62%);
 }
 
 .numbers:hover, .operators:hover, .decimal-point:hover {
-    background: #fff;
+    background: hsl(268, 77%, 43%) ;
 } 
 
 .functions {
-    background: hsl(185, 42%, 37%);
-    border-color: hsl(185, 58%, 25%);
-    color: hsl(52, 100%, 62%);
+    background:  hsl(281, 89%, 26%);
+    border-color:  hsl(285, 91%, 52%) ;
+    color: hsl(0, 0%, 100%);
     transition: .4s;
 }
 
 .functions:hover {
-    background: hsl(185, 56%, 57%);
+    background: hsl(281, 87%, 51%);
 }
 
 .submit {
-    background: hsl(25, 98%, 40%);
-    border-color:  hsl(25, 99%, 27%) ;
+    background: hsl(176, 100%, 44%);
+    border-color:hsl(177, 92%, 70%);
+    color: hsl(268, 75%, 9%);
 }
 
 .submit:hover {
-    background:  hsl(25, 100%, 62%);
+    background:  hsl(176, 100%, 78%);
 }
