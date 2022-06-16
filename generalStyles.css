@@ -173,8 +173,9 @@ body {
 
 .attribution { 
     font-size: 11px;
-    position: absolute;
-    bottom: 20px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 10px;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
@@ -182,4 +183,12 @@ body {
  }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (orientation:landscape) {
+    body {
+        width: 100vh;
+        height: 100vw;
+        background: none;
+    }
 }
