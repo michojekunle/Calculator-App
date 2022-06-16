@@ -16,13 +16,19 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     background:none;
-    width: 400px;
+    width: 260px;
+    background-color: chartreuse;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 18px ;
+}
+
+.header p {
+    margin-top: 20px;
 }
 
 .theme {
@@ -39,24 +45,116 @@ html {
 .themeSwitcher {
     display: block;
     justify-content: center;
+    align-items: center;
 }
 
 .themeSwitcher span {
     font-size: .3rem;
+    letter-spacing: 5px;
+    padding-left: 2px;
 }
 
 .themeSwitcher .theme-switcher-buttons {
-    width: 84px;
-    padding: 4px;
-    height: 8px;
-
+    width: 40px;
+    height: 15px;
+    background:blue;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+    align-items: center;
 }
 
-.themeSwitcher .theme-switcher-buttons span {
-    width: 60px;
-    height: 60px;
+.themeSwitcher .theme-switcher-buttons div {
+    width: 9px;
+    height: 9px;
     border-radius: 100%;
-    color: #000;
+    background: #000;
+}
+
+.result-board {
+    background: rosybrown;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    border-radius: 8px;
+    width: 100%;
+    height: 70px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+}
+
+.calculation-input-keys .calculationButtons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "seven eight nine del" 
+        "four  five six  plus"
+        "one   two  three minus"
+        "dp   zeroNo slash  timesSymbol"
+        "reset  reset  equals  equals";
+
+    padding: 12px;
+    border-radius: 8px;
+    background: rebeccapurple;
+    gap: 12px;
+}
+
+.numbers, .operators, .decimal-point, .functions {
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid;
+    width: 100%;
+    height: 30px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers .seven {
+    grid-area: seven;
+}
+
+.numbers .six {
+    grid-area: six;
+}
+
+.numbers .five {
+    grid-area: five;
+}
+
+.numbers .four {
+    grid-area: four;
+}
+
+.numbers .three {
+    grid-area: three;
+}
+
+.numbers .two {
+    grid-area: two;
+}
+
+.numbers .one {
+    grid-area: one;
+}
+
+.numbers .eight {
+    grid-area: eight;
+}
+
+.numbers .nine {
+    grid-area: nine;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+ .submit {
+    grid-area: equals;
 }
 
 
