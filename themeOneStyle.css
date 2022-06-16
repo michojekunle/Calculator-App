@@ -1,0 +1,57 @@
+body{
+    background:  hsl(222, 26%, 31%);
+}
+
+.header p, .themeSwitcher span, .theme>span {
+    color: #fff;
+}
+
+.themeSwitcher .theme-switcher-buttons {
+    background:hsl(223, 31%, 20%);
+}
+
+.theme-switcher-buttons div.btn1{
+    background: hsl(6, 63%, 50%);
+}
+
+.theme-switcher-buttons div.btn2, .theme-switcher-buttons div.btn3 {
+    background: none;
+}
+
+.result-board, .calculation-input-keys .calculationButtons {
+    background: hsl(224, 36%, 15%);
+}
+
+.result-board h1 {
+    color: #fff;
+}
+
+.numbers, .operators, .decimal-point { 
+    background: hsl(30, 25%, 89%);
+    border-color:hsl(28, 16%, 65%) ;
+    color: hsl(221, 14%, 31%);
+}
+
+.numbers:hover, .operators:hover, .decimal-point:hover {
+    background: #fff;
+} 
+
+.functions {
+    background: hsl(225, 21%, 49%);
+    border-color: hsl(224, 28%, 35%);
+    color: #fff;
+    transition: .4s;
+}
+
+.functions:hover {
+    background: hsl(225, 37%, 73%);
+}
+
+.submit {
+    background: hsl(6, 63%, 50%);
+    border-color:  hsl(6, 70%, 34%) ;
+}
+
+.submit:hover {
+    background: hsl(6, 100%, 74%);
+}
