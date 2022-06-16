@@ -157,6 +157,9 @@ html {
     grid-area: equals;
 }
 
+.functions {
+    font-size: .9rem;
+}
 
 .attribution { 
     font-size: 11px;
@@ -169,5 +172,4 @@ html {
  }
 .attribution a {
     color: hsl(228, 45%, 44%);
-
 }
