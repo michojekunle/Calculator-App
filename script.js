@@ -1,10 +1,11 @@
 //theme switching buttons 
 
-const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2');
-const btn3 = document.getElementById('btn3');
+const btn1 = document.getElementById('btn1');//theme one button
+const btn2 = document.getElementById('btn2');//theme two button
+const btn3 = document.getElementById('btn3');//theme three button 
 
 
+//functions to change themes on click on respective buttons.
 btn1.addEventListener ('click', () => {
     document.getElementById('themes').href = "themeOneStyle.css"
 })
@@ -17,7 +18,8 @@ btn3.addEventListener ('click', () => {
     document.getElementById('themes').href = "themeThreeStyle.css"
 })
 
-// Calculations and display
+/*------Calculations and display------*/
+
 
 //Objects holding values for all keys 
 let keyButtons = {
@@ -38,3 +40,6 @@ let keyButtons = {
     "divide":' / ';
 }
 
+let displayText = document.getElementById('displayText');//screen display.
+
+displayText = 0;
