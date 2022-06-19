@@ -40,7 +40,22 @@ const keyButtons = {
     "divide":' / '
 }
 
-let operation = "0";
-document.getElementById('displayText').innerHTML = operation;//screen display.
+let operation = "";
+
+function keys(key) {
+    operation.concat(keyButtons[key]);
+    document.getElementById('displayText').innerHTML = operation;//screen display.
+}
+
+function delete() {
+    operation.slice((operation.length-1), 1);
+}
+
+function reset() {
+    operation = "";
+}
+
+
+
 
 
