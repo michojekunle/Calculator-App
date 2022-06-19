@@ -45,7 +45,10 @@ let operation = "";
 function keys(key) {
     operation.concat(keyButtons[key]);
     document.getElementById('displayText').innerHTML = operation;//screen display.
+    console.log(operation);
 }
+
+console.log(operation);
 
 function del() {
     operation.slice((operation.length-1), 1);
@@ -53,4 +56,49 @@ function del() {
 
 function reset() {
     operation = "";
+}
+
+function calculate() {
+    //addition
+    if (operation.includes('+')){
+        operation.split('+');
+        let total = 0;
+        for(let i=0;i<operation.length;i+=2){
+            total += operation[i];
+        }
+        operation = total;
+    }
+    
+    //subtraction
+    if (operation.includes('-')){
+        operation.split('-');
+        let total;
+        for(let i=2;i<operation.length;i+=2){
+            operation[0] -= operation[i];
+            total = operation[0];
+        }
+        operation = total;
+    }
+
+
+    //division
+    if (operation.includes('/')){
+        operation.split('/');
+        let total;
+        total = operation[0] / operation[2];
+        
+        operation = total;
+    }
+
+    //multiplication
+    if (operation.includes('*')){
+        operation.split('*');
+        let total = 1;
+
+        for(let i=0;i<operation.length;i+=2){
+            total *= operation[i];
+        }
+
+        operation = total;
+    }
 }
