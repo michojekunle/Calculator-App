@@ -22,24 +22,25 @@ btn3.addEventListener ('click', () => {
 
 
 //Objects holding values for all keys 
-let keyButtons = {
-    "one": '1';
-    "two": '2';
-    "three": '3';
-    "four": '4';
-    "five": '5';
-    "six": '6';
-    "seven": '7';
-    "eight": '8';
-    "nine": '9';
-    "zero":'0';
-    "decimalPoint":'.';
-    "plus":' + ';
-    "minus":' - ';
-    "times":' * ';
-    "divide":' / ';
+const keyButtons = {
+    "one": '1',
+    "two": '2',
+    "three": '3',
+    "four": '4',
+    "five": '5',
+    "six": '6',
+    "seven": '7',
+    "eight": '8',
+    "nine": '9',
+    "zero":'0',
+    "decimalPoint":'.',
+    "plus":' + ',
+    "minus":' - ',
+    "times":' * ',
+    "divide":' / '
 }
 
-let displayResult = document.getElementById('displayText').innerHTML;//screen display.
 let operation = "0";
-displayResult = operation;
+document.getElementById('displayText').innerTEXT = operation;//screen display.
+
+
