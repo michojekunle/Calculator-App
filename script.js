@@ -41,6 +41,6 @@ const keyButtons = {
 }
 
 let operation = "0";
-document.getElementById('displayText').innerTEXT = operation;//screen display.
+document.getElementById('displayText').innerText = operation;//screen display.
 
 
