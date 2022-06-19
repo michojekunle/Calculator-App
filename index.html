@@ -30,28 +30,28 @@
       </div>
     </div>
     <div class="result-board">
-        <h1>399,981</h1>
+        <h1 id="displayText">399,981</h1>
     </div>
     <div class="calculation-input-keys">
        <div class="calculationButtons">
-        <button class="numbers seven">7</button>
-        <button class="numbers eight">8</button>
-        <button class="numbers nine">9</button>
-        <button class="functions del">DEL</button>
-        <button class="numbers four">4</button>
-        <button class="numbers five">5</button>
-        <button class="numbers six">6</button>
-        <button class="operators plus">+</button>
-        <button class="numbers one">1</button>
-        <button class="numbers two">2</button>
-        <button class="numbers three">3</button>
-        <button class="operators minus">-</button>
-        <button class="decimal-point">.</button>
-        <button class="numbers zero">0</button>
-        <button class="operators divide">/</button>
-        <button class="numbers times">&times;</button>
-        <button class="functions reset" type="reset">RESET</button>
-        <button class="functions submit" type="submit">=</button>
+        <button onclick="keys("seven")"  class="numbers seven">7</button>
+        <button onclick="keys("eight")" class="numbers eight">8</button>
+        <button onclick="keys("nine")" class="numbers nine">9</button>
+        <button onclick="delete()" class="functions del">DEL</button>
+        <button onclick="keys("four")" class="numbers four">4</button>
+        <button onclick="keys("five")" class="numbers five">5</button>
+        <button onclick="keys("six")" class="numbers six">6</button>
+        <button onclick="keys("plus")" class="operators plus">+</button>
+        <button onclick="keys("one")" class="numbers one">1</button>
+        <button onclick="keys("two")" class="numbers two">2</button>
+        <button onclick="keys("three")" class="numbers three">3</button>
+        <button onclick="keys("minus")" class="operators minus">-</button>
+        <button onclick="keys("decimalPoint")" class="decimal-point">.</button>
+        <button onclick="keys("zero")" class="numbers zero">0</button>
+        <button onclick="keys("divide")" class="operators divide">/</button>
+        <button onclick="keys("times")" class="numbers times">&times;</button>
+        <button class="functions reset" onclick="reset()">RESET</button>
+        <button class="functions submit" onclick="calculate()">=</button>
        </div>
     </div>
   </div>
