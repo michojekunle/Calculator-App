@@ -40,6 +40,6 @@ let keyButtons = {
     "divide":' / ';
 }
 
-let displayText = document.getElementById('displayText');//screen display.
+let displayResult = document.getElementById('displayText');//screen display.
 
-displayText = 0;
+displayResult = 0;
