@@ -80,6 +80,7 @@ body {
 
 .result-board {
     background: rosybrown;
+    overflow: hidden;
     font-size: .9rem;
     display: flex;
     justify-content:right;

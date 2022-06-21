@@ -23,36 +23,45 @@ btn3.addEventListener ('click', () => {
 
 //Objects holding values for all keys 
 const keyButtons = {
-    "one": '1',
-    "two": '2',
-    "three": '3',
-    "four": '4',
-    "five": '5',
-    "six": '6',
-    "seven": '7',
-    "eight": '8',
-    "nine": '9',
-    "zero":'0',
-    "decimalPoint":'.',
-    "plus":' + ',
-    "minus":' - ',
-    "times":' * ',
-    "divide":' / '
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7",
+    "eight": "8",
+    "nine": "9",
+    "zero":"0",
+    "decimalPoint":".",
+    "plus":" + ",
+    "minus":" - ",
+    "times":" * ",
+    "divide":" / "
 }
 
-let operation = "0";
+let operationArray = ['0'];
+let screenDisplay = '';
 
 function keys(key) {
-    operation.concat(keyButtons[key]);
-    document.getElementById('displayText').innerHTML = operation;//screen display.
-    console.log(operation);
+    operationArray.push(keyButtons[key]);    
+    console.log(keyButtons[key]);
+    console.table(operationArray);
+    displayText(operationArray)
 }
-
-console.log(operation);
 
 function del() {
-    operation.slice((operation.length-1), 1);
+    operationArray.pop();
 }
+
+function displayText(inputArr) {
+        document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
+        screenDisplay = document.getElementById('displayText').innerHTML;       
+        
+        
+}
+
+
 
 function reset() {
     operation = "";
