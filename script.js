@@ -40,7 +40,7 @@ const keyButtons = {
     "divide":' / '
 }
 
-let operation = "";
+let operation = "0";
 
 function keys(key) {
     operation.concat(keyButtons[key]);

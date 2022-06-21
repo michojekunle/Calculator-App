@@ -14,14 +14,13 @@ body {
     width: 100vw;
     height: 100vh;
     background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background:none;
     width: 260px;
 }
 
@@ -173,9 +172,8 @@ body {
 
 .attribution { 
     font-size: 11px;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 10px;
+    position: absolute;
+    top: 10px;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
@@ -185,14 +183,10 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-@media (orientation:landscape) {
+@media (max-height:500px) {
     body {
-        width: 100vh;
-        height: 100vw;
+        width: 100vw;
+        height: 450px;
         background: none;
-    }
-
-    .container {
-         margin-top: 150px;
     }
 }
