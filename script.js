@@ -44,8 +44,10 @@ let operationArray = ['0'];
 let screenDisplay = '';
 
 function keys(key) {
+    
     operationArray.push(keyButtons[key]);    
     console.log(keyButtons[key]);
+    
     displayText(operationArray)
 
 }
@@ -53,8 +55,12 @@ function keys(key) {
 function displayText(inputArr) {       
         document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
         screenDisplay = document.getElementById('displayText').innerHTML;       
-        
 }
+
+const delButton = document.querySelector('.del');
+delButton.addEventListener('click', () => {
+    keys(del)
+})
 
 function reset() {
     screenDisplay = "";
@@ -68,7 +74,6 @@ function calculate() {
         for(let i=0;i<operationArray.length;i+=2){
             total += operationArray[i];
         }
-         = total;
     }
     
     //subtraction
@@ -104,5 +109,3 @@ function calculate() {
         operation = total;
     }
 }
-
-
