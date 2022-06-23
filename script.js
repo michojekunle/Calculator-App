@@ -37,75 +37,87 @@ const keyButtons = {
     "plus":" + ",
     "minus":" - ",
     "times":" * ",
-    "divide":" / "
+    "divide":" / " ,
+    "null":" "
 }
 
 let operationArray = ['0'];
 let screenDisplay = '';
 
 function keys(key) {
-    
     operationArray.push(keyButtons[key]);    
     console.log(keyButtons[key]);
-    
     displayText(operationArray)
-
 }
 
-function displayText(inputArr) {       
+
+
+
+function displayText(inputArr) {   
+
         document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
         screenDisplay = document.getElementById('displayText').innerHTML;       
+
+        const del = () => {
+            operationArray.pop();
+        }
+        function reset() {
+            operationArray.splice(0, operationArray.length);
+        }
+
+        const calculateButton = document.querySelector('.equals');
+        calculateButton.addEventListener('click', () => {
+                
+                //addition
+                if (screenDisplay.includes(' + ')){
+                    screenDisplay.split(' + ');
+                    console.log(screenDisplay)
+                    console.log(screenDisplay[1])
+                    let total = 0;
+                    for(let i=0;i<screenDisplay.length;i+=2){
+                        total += parseFloat(screenDisplay[i]);
+                    }
+                }
+                
+                //subtraction
+                if (operationArray.includes(' - ')){
+                    operationArray.split(' - ');
+                    let total;
+                    for(let i=2;i<operationArray.length;i+=2){
+                        parseFloat(operationArray[0]) -= parseFloat(operationArray[i]);
+                        total = parseFloat(operationArray[0]);
+                    }
+                    console.log(total);
+                }
+            
+                // //division
+                // if (operationArray.includes(' / ')){
+                //     operationArray.split(' / ');
+                //     let total;
+                //     total = parseFloat(operationArray[0]) / parseFloat(operationArray[2]);
+                // }
+            
+                // //multiplication
+                // if (screenDisplay.includes('*')){
+                //     screenDisplay.split('*');
+                //     let total = 1;
+            
+                //     for(let i=0;i<screenDisplay.length;i+=2){
+                //         total *= screenDisplay[i];
+                //     }
+                // }
+            console.log(total);
+            screenDisplay = total;
+        }) 
 }
 
 const delButton = document.querySelector('.del');
 delButton.addEventListener('click', () => {
-    keys(del)
+    const nullKey = keys()
+        nullKey(del());
 })
 
 function reset() {
     screenDisplay = "";
 }
 
-function calculate() {
-    //addition
-    if (operationArray.includes(' + ')){
-        operationArray.split(' + ');
-        let total = 0;
-        for(let i=0;i<operationArray.length;i+=2){
-            total += operationArray[i];
-        }
-    }
-    
-    //subtraction
-    if (operation.includes('-')){
-        operation.split('-');
-        let total;
-        for(let i=2;i<operation.length;i+=2){
-            operation[0] -= operation[i];
-            total = operation[0];
-        }
-        operation = total;
-    }
-
-
-    //division
-    if (operation.includes('/')){
-        operation.split('/');
-        let total;
-        total = operation[0] / operation[2];
-        
-        operation = total;
-    }
-
-    //multiplication
-    if (operation.includes('*')){
-        operation.split('*');
-        let total = 1;
-
-        for(let i=0;i<operation.length;i+=2){
-            total *= operation[i];
-        }
-
-        operation = total;
-    }
-}
