@@ -50,17 +50,10 @@ function keys(key) {
     displayText(operationArray)
 }
 
-
-
-
 function displayText(inputArr) {   
-
         document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
         screenDisplay = document.getElementById('displayText').innerHTML;       
-
-        const del = () => {
-            operationArray.pop();
-        }
+        
         function reset() {
             operationArray.splice(0, operationArray.length);
         }
@@ -112,6 +105,9 @@ function displayText(inputArr) {
 }
 
 const delButton = document.querySelector('.del');
+
+
+
 delButton.addEventListener('click', () => {
     const nullKey = keys()
         nullKey(del());
