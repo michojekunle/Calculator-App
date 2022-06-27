@@ -3,6 +3,7 @@
 const btn1 = document.getElementById('btn1');//theme one button
 const btn2 = document.getElementById('btn2');//theme two button
 const btn3 = document.getElementById('btn3');//theme three button 
+const displayedText = document.getElementById('displayText').innerHTML;
 const del = document.querySelector('.functions.del')
 
 //functions to change themes on click on respective buttons
@@ -44,13 +45,22 @@ const keyButtons = {
 let operationArray = ['0'];
 let screenDisplay = '';
 
+
+
 function keys(key) {
     operationArray.push(keyButtons[key]);    
     console.log(keyButtons[key]);
-    displayText(operationArray)
+    displayText(operationArray);
+}
+
+del.addEventListener('click', del());
+
+function del() {
+    operationArray.pop();
+    displayText(operationArray);
 }
 
 function displayText(inputArr) {   
-        document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
-        screenDisplay = document.getElementById('displayText').innerHTML;      
+       displayedText = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
+        screenDisplay = displayedText;      
 }
