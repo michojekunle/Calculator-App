@@ -3,7 +3,6 @@
 const btn1 = document.getElementById('btn1');//theme one button
 const btn2 = document.getElementById('btn2');//theme two button
 const btn3 = document.getElementById('btn3');//theme three button 
-const displayedText = document.getElementById('displayText').innerHTML;
 const del = document.querySelector('.functions.del')
 
 //functions to change themes on click on respective buttons
@@ -42,25 +41,85 @@ const keyButtons = {
     "null":" "
 }
 
+let word = 'ei5i5 + tyhyth66';
+console.log(word.includes(' + '));
+
 let operationArray = ['0'];
 let screenDisplay = '';
 
+function reset() {
+    screenDisplay = "";
+    operationArray= ['0'];
+    displayText(operationArray)
+}
 
 
 function keys(key) {
     operationArray.push(keyButtons[key]);    
     console.log(keyButtons[key]);
-    displayText(operationArray);
-}
-
-del.addEventListener('click', del());
-
-function del() {
-    operationArray.pop();
-    displayText(operationArray);
+    displayText(operationArray)
 }
 
 function displayText(inputArr) {   
-       displayedText = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
-        screenDisplay = displayedText;      
+        document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
+        screenDisplay = document.getElementById('displayText').innerHTML;       
+        
+        function reset() {
+            operationArray.splice(0, operationArray.length);
+        }
+
+        const calculateButton = document.querySelector('.equals');
+        calculateButton.addEventListener('click', () => {
+                let total;
+                //addition
+                if (screenDisplay.includes(' + ')){
+                    screenDisplay.split(' + ');
+                    console.log(screenDisplay)
+                    console.log(screenDisplay[1])
+                    total = 0;
+                    for(let i=0;i<screenDisplay.length;i+=2){
+                        total += parseFloat(screenDisplay[i]);
+                    }
+                }
+                
+                // //subtraction
+                // if (operationArray.includes(' - ')){
+                //     operationArray.split(' - ');
+                //     total;
+                //     for(let i=2;i<operationArray.length;i+=2){
+                //         parseFloat(operationArray[0]) -= parseFloat(operationArray[i]);
+                //         total = parseFloat(operationArray[0]);
+                //     }
+                //     console.log(total);
+                // }
+            
+                // //division
+                // if (operationArray.includes(' / ')){
+                //     operationArray.split(' / ');
+                //     let total;
+                //     total = parseFloat(operationArray[0]) / parseFloat(operationArray[2]);
+                // }
+            
+                // //multiplication
+                // if (screenDisplay.includes('*')){
+                //     screenDisplay.split('*');
+                //     let total = 1;
+            
+                //     for(let i=0;i<screenDisplay.length;i+=2){
+                //         total *= screenDisplay[i];
+                //     }
+                // }
+            console.log(total);
+            screenDisplay = total;
+        }) 
 }
+
+const delButton = document.querySelector('.del');
+
+
+
+delButton.addEventListener('click', () => {
+    const nullKey = keys()
+        nullKey(del());
+})
+
