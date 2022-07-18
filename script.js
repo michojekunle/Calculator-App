@@ -3,7 +3,6 @@
 const btn1 = document.getElementById('btn1');//theme one button
 const btn2 = document.getElementById('btn2');//theme two button
 const btn3 = document.getElementById('btn3');//theme three button 
-const del = document.querySelector('.functions.del')
 
 //functions to change themes on click on respective buttons
 btn1.addEventListener ('click', () => {
@@ -41,8 +40,8 @@ const keyButtons = {
     "null":" "
 }
 
-let word = 'ei5i5 + tyhyth66';
-console.log(word.includes(' + '));
+// let word = 'ei5i5 + tyhyth66';
+// console.log(word.includes(' + '));
 
 let operationArray = ['0'];
 let screenDisplay = '';
@@ -53,6 +52,16 @@ function reset() {
     displayText(operationArray)
 }
 
+function del() {
+    if (operationArray == []){
+        console.log('Empty Array');
+    } else {
+        operationArray.pop();
+        screenDisplay = '';
+        displayText(operationArray);
+        console.log(operationArray);
+    }
+}
 
 function keys(key) {
     operationArray.push(keyButtons[key]);    
@@ -63,11 +72,7 @@ function keys(key) {
 function displayText(inputArr) {   
         document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
         screenDisplay = document.getElementById('displayText').innerHTML;       
-        
-        function reset() {
-            operationArray.splice(0, operationArray.length);
-        }
-
+    
         const calculateButton = document.querySelector('.equals');
         calculateButton.addEventListener('click', () => {
                 let total;
@@ -113,13 +118,3 @@ function displayText(inputArr) {
             screenDisplay = total;
         }) 
 }
-
-const delButton = document.querySelector('.del');
-
-
-
-delButton.addEventListener('click', () => {
-    const nullKey = keys()
-        nullKey(del());
-})
-
