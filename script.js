@@ -53,7 +53,7 @@ function reset() {
 }
 
 function del() {
-    if (operationArray == []){
+    if (operationArray.length<1){
         console.log('Empty Array');
     } else {
         operationArray.pop();
