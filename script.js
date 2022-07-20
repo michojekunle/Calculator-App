@@ -46,6 +46,8 @@ const keyButtons = {
 let operationArray = ['0'];
 let screenDisplay = '';
 
+displayText(operationArray)
+
 function reset() {
     screenDisplay = "";
     operationArray= ['0'];
@@ -70,10 +72,14 @@ function keys(key) {
 }
 
 function displayText(inputArr) {   
-        document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
-        screenDisplay = document.getElementById('displayText').innerHTML;       
-    
-        
+    screenDisplay = '';
+    for (let i = 0; i <inputArr.length; i++) {
+        screenDisplay = screenDisplay.concat(inputArr[i]);
+    };
+    console.log(screenDisplay);
+
+    document.getElementById('displayText').innerHTML = screenDisplay;
+        // document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.                  
 }
 
 const calculateButton = document.querySelector('.equals');
