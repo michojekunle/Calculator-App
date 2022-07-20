@@ -53,7 +53,7 @@ function reset() {
 }
 
 function del() {
-    if (operationArray.length<1){
+    if (!(operationArray.length>1)){
         console.log('Empty Array');
     } else {
         operationArray.pop();
@@ -73,7 +73,10 @@ function displayText(inputArr) {
         document.getElementById('displayText').innerHTML = screenDisplay.concat(inputArr[inputArr.length-1]) //screen display.
         screenDisplay = document.getElementById('displayText').innerHTML;       
     
-        const calculateButton = document.querySelector('.equals');
+        
+}
+
+const calculateButton = document.querySelector('.equals');
         calculateButton.addEventListener('click', () => {
                 let total;
                 //addition
@@ -83,7 +86,8 @@ function displayText(inputArr) {
                     console.log(screenDisplay[1])
                     total = 0;
                     for(let i=0;i<screenDisplay.length;i+=2){
-                        total += parseFloat(screenDisplay[i]);
+                        total += +screenDisplay[i];
+                        console.log(total);
                     }
                 }
                 
@@ -116,5 +120,5 @@ function displayText(inputArr) {
                 // }
             console.log(total);
             screenDisplay = total;
+            document.getElementById('displayText').innerHTML = screenDisplay;
         }) 
-}
