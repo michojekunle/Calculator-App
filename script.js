@@ -1,4 +1,4 @@
-Hi//theme switching buttons 
+//theme switching buttons 
 
 const btn1 = document.getElementById('btn1');//theme one button
 const btn2 = document.getElementById('btn2');//theme two button
@@ -30,7 +30,8 @@ buttons.map( button => {
                 break;
             case '=':
                 try{
-                    display.innerText = eval(display.innerText).toFixed(3);
+                    display.innerText = eval(display.innerText).toFixed(3
+4);
                 } catch {
                     display.innerText = "Error"
                 }
