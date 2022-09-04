@@ -31,7 +31,7 @@ buttons.map( button => {
             case '=':
                 try{
                     display.innerText = eval(display.innerText).toFixed(3
-4);
+);
                 } catch {
                     display.innerText = "Error"
                 }
